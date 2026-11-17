@@ -2,8 +2,6 @@
 
 Static structural analysis of the three PLA links of a 3-joint robotic arm (designed to be 3D-printed; not yet printed), done in **ANSYS Workbench 2026 R1 (Student)**. Each link was checked under the worst-case load, the results were verified against hand calculations, and a mesh-refinement study was used to tell a real stress peak from a modelling artefact.
 
-> This is the structural-analysis part of my final-year robotic arm project (motor selection, CAD, FEA and dynamic modelling). This repository focuses on the FEA work.
-
 ![Safety factor by link](results/safety_factor_by_link.png)
 
 ## Key results
@@ -85,7 +83,7 @@ The Link 1 peak sits right beside the fully fixed holes. To check whether it was
 
 **The peak rose by 96% with refinement and did not converge.** A peak that keeps growing as the mesh gets finer is the signature of a **stress singularity**. Here it is caused by modelling the holes as perfectly rigid fixed supports, which real bolts are not. So the design is judged on the converged main-section stress (~4 MPa, safety factor ~12), and the hole region is flagged for a better bolt model.
 
-*(The mesh study used an earlier practice load; the final load gives the 20.3 MPa peak shown above.)*
+*(The mesh study used an earlier practice load; the full design load gives the 20.3 MPa peak shown above.)*
 
 ## Verification
 
