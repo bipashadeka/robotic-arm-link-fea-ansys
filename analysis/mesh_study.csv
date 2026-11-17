@@ -1,0 +1,3 @@
+case,mesh_size,peak_von_mises_MPa,note
+Link 1 practice load,2 mm global,6.01,baseline mesh
+Link 1 practice load,0.5 mm refined at fixed holes,11.75,same load; peak rose ~96% with refinement

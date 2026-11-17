@@ -1,0 +1,4 @@
+link,length_mm,mass_g,fixed_holes,loaded_holes,applied_force_y_N,applied_moment_z_Nmm,max_deformation_mm,max_von_mises_MPa,ansys_reaction_N
+Link 1,150,53,4 small,6 large,-12.17,-2726,1.43,20.3,12.69
+Link 2,141,58,4 small,6 large,-9.96,1546,0.38,4.44,10.52
+Link 3,141,53,4 small,2 large,-7.85,549,0.20,1.80,8.36
