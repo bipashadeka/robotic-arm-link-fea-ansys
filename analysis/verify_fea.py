@@ -5,7 +5,7 @@ What this script does
 1. Reaction-force check: the support reaction ANSYS reports must equal the
    applied load plus the link's own weight (static equilibrium, sum Fy = 0).
 2. Safety factor: yield strength of PLA / peak von Mises stress, compared with
-   the design target of 3 for 3D-printed parts.
+   the design target of 3 (links are intended for 3D printing).
 3. Mesh sensitivity: shows that the Link 1 peak at the fixed holes keeps rising
    as the mesh is refined, so it is a stress singularity, not a real peak.
 4. Saves two summary charts to ../results/.
@@ -24,7 +24,7 @@ RESULTS.mkdir(exist_ok=True)
 
 G = 9.81                 # m/s^2
 PLA_YIELD_MPA = 50.0     # typical value for solid PLA (assumed, not measured)
-TARGET_FOS = 3.0         # design target for 3D-printed parts
+TARGET_FOS = 3.0         # design target (links intended for 3D printing)
 LINK1_MAIN_SECTION_MPA = 4.0  # hand-calculated bending stress away from the holes
 
 # Chart styling

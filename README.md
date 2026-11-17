@@ -1,6 +1,6 @@
-# Structural FEA of 3D-Printed Robotic Arm Links (ANSYS Workbench)
+# Structural FEA of PLA Robotic Arm Links (ANSYS Workbench)
 
-Static structural analysis of the three PLA links of a 3-joint robotic arm, done in **ANSYS Workbench 2026 R1 (Student)**. Each link was checked under the worst-case load, the results were verified against hand calculations, and a mesh-refinement study was used to tell a real stress peak from a modelling artefact.
+Static structural analysis of the three PLA links of a 3-joint robotic arm (designed to be 3D-printed; not yet printed), done in **ANSYS Workbench 2026 R1 (Student)**. Each link was checked under the worst-case load, the results were verified against hand calculations, and a mesh-refinement study was used to tell a real stress peak from a modelling artefact.
 
 > This is the structural-analysis part of my final-year robotic arm project (motor selection, CAD, FEA and dynamic modelling). This repository focuses on the FEA work.
 
@@ -40,7 +40,7 @@ Link 1 (blue) stands upright and turns with the base. Link 2 (green, shoulder) a
 | Load case | Worst case: arm fully stretched out, 300 g payload + 100 g gripper allowance |
 | Gravity | −Y |
 | Load factor | Applied loads include a **2× safety factor** |
-| Design target | Safety factor ≥ 3 for 3D-printed parts |
+| Design target | Safety factor ≥ 3, because the links are intended for 3D printing in PLA |
 
 **Boundary conditions**
 
@@ -120,7 +120,7 @@ The raw numbers are in [`analysis/fea_results.csv`](analysis/fea_results.csv) an
 
 ## Limitations and next steps
 
-* PLA properties are typical assumed values. Printed parts are weaker because of layer lines and infill → **test a printed sample**.
+* PLA properties are typical assumed values for solid PLA. Once the links are printed, layer lines and infill will make them weaker than this → **print a test sample and measure its strength**.
 * Holes modelled as fully fixed → **model bolts and washers** (bolt pretension or contact) to remove the singularity at Link 1.
 * The sideways offset between links isn't modelled → **measure it in the assembly and update the loads**.
 * The gripper is represented by a 100 g allowance → **update the loads once the gripper is designed**.
